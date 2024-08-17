@@ -1,0 +1,65 @@
+﻿@model Multiuserregistrartion.Models.userRegistration
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<div>
+    @using (Html.BeginForm("user_registration", "UserRegistration", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <div>
+            <label>Name</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.name)
+        </div>
+        <div>
+            <label>Address</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.address)
+        </div>
+        <div>
+            <label>mobile</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.phone)
+        </div>
+        <div>
+            <label>Email</label>
+        </div>
+        <div>
+            <label>Photo</label>
+        </div>
+        <div>
+            @Html.TextBox("file", "", new { type = "file" })
+        </div>
+        <div>
+            <label>Email</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.email)
+        </div>
+        <div>
+            <label>Password</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.password)
+        </div>
+        <div>
+            <label>Confirmpassword</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.confirmpassw)
+        </div>
+
+        <div>
+            <input type="submit" value="Insert" />
+            @Html.DisplayFor(m => m.adminmsg)
+        </div>
+
+
+
+    }
+</div>
+

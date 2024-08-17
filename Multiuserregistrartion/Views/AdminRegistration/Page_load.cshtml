@@ -1,0 +1,44 @@
+﻿@model Multiuserregistrartion.Models.adminregistration
+@{
+    ViewBag.Title = "Page_load";
+}
+
+<h2>Page_load</h2>
+
+<div>
+    @using (Html.BeginForm("admin_registration", "adminregistration", FormMethod.Post))
+    {
+        <div>
+            <label>Name</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.name)
+        </div>
+        <div>
+            <label>Address</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.address)
+        </div>
+        <div>
+            <label>mobile</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.phone)
+        </div>
+        <div>
+            <label>Email</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.email)
+        </div>
+
+        <div>
+            <input type="submit" value="Insert" />
+            @Html.DisplayFor(m => m.adminmsg)
+        </div>
+        
+
+    }
+</div>
+

@@ -1,0 +1,33 @@
+﻿@model Multiuserregistrartion.Models.Loginprocess
+@{
+    ViewBag.Title = "Login_view";
+}
+<div>
+    @using (Html.BeginForm("LoginButton", "Login", FormMethod.Get))
+    {
+        <div>
+            <h4>Login</h4>
+        </div>
+        <div>
+            <label>Username</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.username)
+        </div>
+        <div>
+            <label>Password</label>
+        </div>
+        <div>
+            @Html.TextBoxFor(m => m.password)
+        </div>
+        <div>
+          <input type="submit" value="Login" />
+            @Html.ValidationMessageFor(m=>m.msg)
+        </div>
+
+    }
+    
+</div>
+
+
+
